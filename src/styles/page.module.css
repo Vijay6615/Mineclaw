@@ -1,0 +1,224 @@
+.main {
+  min-height: 100vh;
+}
+
+.quickAction {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
+  color: white;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.actionContainer h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 800;
+}
+
+.actionContainer p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: 0.95;
+}
+
+.actionButtons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.callBtn, .resourceBtn {
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.callBtn {
+  background: white;
+  color: #ff6b6b;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.callBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.resourceBtn {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid white;
+  backdrop-filter: blur(10px);
+}
+
+.resourceBtn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.warningSigns {
+  padding: 5rem 2rem;
+  background: white;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sectionTitle {
+  text-align: center;
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: #2d3748;
+  margin-bottom: 1rem;
+  font-weight: 800;
+}
+
+.sectionSubtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #718096;
+  margin-bottom: 3rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.signsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.signCard {
+  background: #f8f9fa;
+  padding: 2rem;
+  border-radius: 15px;
+  border-left: 5px solid #667eea;
+  transition: all 0.3s ease;
+}
+
+.signCard:hover {
+  transform: translateX(5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.signCard h3 {
+  font-size: 1.5rem;
+  color: #2d3748;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.signCard ul {
+  list-style: none;
+  padding: 0;
+}
+
+.signCard li {
+  padding: 0.75rem 0;
+  color: #4a5568;
+  font-size: 1.05rem;
+  border-bottom: 1px solid #e2e8f0;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.signCard li:last-child {
+  border-bottom: none;
+}
+
+.signCard li:before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #667eea;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.cta {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.ctaContent h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 1rem;
+  font-weight: 800;
+}
+
+.ctaContent p {
+  font-size: 1.3rem;
+  margin-bottom: 2.5rem;
+  opacity: 0.95;
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.learnMoreBtn, .contactBtn {
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.learnMoreBtn {
+  background: white;
+  color: #667eea;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.learnMoreBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.contactBtn {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid white;
+  backdrop-filter: blur(10px);
+}
+
+.contactBtn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .quickAction, .cta {
+    padding: 3rem 1.5rem;
+  }
+
+  .actionButtons, .ctaButtons {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+
+  .callBtn, .resourceBtn, .learnMoreBtn, .contactBtn {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .signsGrid {
+    grid-template-columns: 1fr;
+  }
+}

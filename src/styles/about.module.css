@@ -1,0 +1,468 @@
+.main {
+  min-height: 100vh;
+  background: white;
+}
+
+.hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 5rem 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  opacity: 0.1;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.heroContent h1 {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  margin-bottom: 1.5rem;
+  font-weight: 800;
+}
+
+.tagline {
+  font-size: clamp(1.2rem, 3vw, 1.6rem);
+  opacity: 0.95;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.mission {
+  padding: 5rem 0;
+  background: #f8f9fa;
+  margin: 0 -2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.missionContent {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.missionText h2 {
+  font-size: 2.5rem;
+  color: #2d3748;
+  margin-bottom: 1.5rem;
+  font-weight: 800;
+}
+
+.missionText p {
+  color: #4a5568;
+  line-height: 1.9;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.missionStats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.statBox {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+  border: 2px solid #e2e8f0;
+  transition: all 0.3s ease;
+}
+
+.statBox:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  border-color: #667eea;
+}
+
+.statBox h3 {
+  font-size: 2.5rem;
+  color: #667eea;
+  margin-bottom: 0.5rem;
+  font-weight: 800;
+}
+
+.statBox p {
+  color: #718096;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.values {
+  padding: 5rem 0;
+}
+
+.sectionTitle {
+  text-align: center;
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: #2d3748;
+  margin-bottom: 1rem;
+  font-weight: 800;
+}
+
+.sectionSubtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #718096;
+  margin-bottom: 3rem;
+}
+
+.valuesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.valueCard {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+  border: 2px solid #e2e8f0;
+  transition: all 0.3s ease;
+}
+
+.valueCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  border-color: #667eea;
+}
+
+.valueIcon {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.valueCard h3 {
+  font-size: 1.5rem;
+  color: #2d3748;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.valueCard p {
+  color: #4a5568;
+  line-height: 1.7;
+}
+
+.story {
+  padding: 5rem 0;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
+  margin: 0 -2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.storyContent {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.storyContent p {
+  color: #4a5568;
+  line-height: 1.9;
+  font-size: 1.15rem;
+  margin-bottom: 1.5rem;
+  text-align: justify;
+}
+
+.timeline {
+  padding: 5rem 0;
+}
+
+.timelineContainer {
+  max-width: 800px;
+  margin: 3rem auto 0;
+  position: relative;
+}
+
+.timelineContainer::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(to bottom, #667eea, #764ba2);
+}
+
+.timelineItem {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.timelineItem:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.timelineYear {
+  flex: 0 0 120px;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #667eea;
+  text-align: center;
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+  border: 2px solid #667eea;
+  position: relative;
+  z-index: 2;
+}
+
+.timelineEvent {
+  flex: 1;
+  background: white;
+  padding: 1.5rem 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+  border-left: 4px solid #667eea;
+  color: #4a5568;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.team {
+  padding: 5rem 0;
+}
+
+.teamGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2.5rem;
+  margin-top: 3rem;
+}
+
+.teamCard {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+  border: 2px solid #e2e8f0;
+  transition: all 0.3s ease;
+}
+
+.teamCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.teamImage {
+  font-size: 5rem;
+  margin-bottom: 1.5rem;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+}
+
+.teamCard h3 {
+  font-size: 1.4rem;
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.teamRole {
+  color: #667eea;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.teamBio {
+  color: #718096;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.impact {
+  padding: 5rem 0;
+  background: #f8f9fa;
+  margin: 0 -2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.impactGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.impactCard {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+  border: 2px solid #e2e8f0;
+  transition: all 0.3s ease;
+}
+
+.impactCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  border-color: #667eea;
+}
+
+.impactIcon {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.impactCard h3 {
+  font-size: 1.5rem;
+  color: #2d3748;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.impactCard p {
+  color: #4a5568;
+  line-height: 1.7;
+}
+
+.cta {
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.cta h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: #2d3748;
+  margin-bottom: 1rem;
+  font-weight: 800;
+}
+
+.cta p {
+  font-size: 1.3rem;
+  color: #718096;
+  margin-bottom: 2.5rem;
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.primaryBtn, .secondaryBtn {
+  padding: 1rem 3rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.primaryBtn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.primaryBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+}
+
+.secondaryBtn {
+  background: white;
+  color: #667eea;
+  border: 2px solid #667eea;
+}
+
+.secondaryBtn:hover {
+  background: #667eea;
+  color: white;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 968px) {
+  .missionContent {
+    grid-template-columns: 1fr;
+  }
+
+  .missionStats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .timelineContainer::before {
+    left: 20px;
+  }
+
+  .timelineItem {
+    flex-direction: row !important;
+    padding-left: 60px;
+  }
+
+  .timelineYear {
+    position: absolute;
+    left: 0;
+    flex: 0 0 80px;
+    font-size: 1.3rem;
+  }
+
+  .timelineEvent {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 4rem 1.5rem;
+  }
+
+  .mission, .story, .impact {
+    padding: 3rem 1.5rem;
+    margin: 0 -1.5rem;
+  }
+
+  .valuesGrid, .teamGrid, .impactGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .missionStats {
+    grid-template-columns: 1fr;
+  }
+
+  .ctaButtons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .primaryBtn, .secondaryBtn {
+    width: 100%;
+    max-width: 300px;
+  }
+}

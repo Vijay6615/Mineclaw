@@ -1,0 +1,275 @@
+.main {
+  min-height: 100vh;
+  background: #f8f9fa;
+}
+
+.hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.heroContent h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  margin-bottom: 1rem;
+  font-weight: 800;
+}
+
+.heroContent p {
+  font-size: 1.3rem;
+  opacity: 0.95;
+}
+
+.emergencyBanner {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
+  color: white;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.emergencyIcon {
+  font-size: 3rem;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+.emergencyContent h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.emergencyNumbers {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.emergencyLink {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+.emergencyLink:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+.controls {
+  margin-bottom: 3rem;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  font-size: 1.1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 50px;
+  margin-bottom: 2rem;
+  transition: all 0.3s ease;
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.categories {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.categoryBtn {
+  padding: 0.75rem 1.5rem;
+  background: white;
+  border: 2px solid #e2e8f0;
+  border-radius: 50px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.categoryBtn:hover {
+  border-color: #667eea;
+  transform: translateY(-2px);
+}
+
+.categoryBtn.active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-color: transparent;
+}
+
+.resourcesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.resourceCard {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+}
+
+.resourceCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.resourceHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+.resourceHeader h3 {
+  font-size: 1.4rem;
+  color: #2d3748;
+  flex: 1;
+}
+
+.availability {
+  background: #e6fffa;
+  color: #047857;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.description {
+  color: #4a5568;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.resourceActions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.actionBtn {
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 10px;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.actionBtn:hover {
+  transform: translateX(5px);
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.noResults {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: #718096;
+  font-size: 1.2rem;
+}
+
+.infoSection {
+  background: white;
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+}
+
+.infoSection h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #2d3748;
+  margin-bottom: 2rem;
+}
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.infoCard {
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.infoCard h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.75rem;
+  color: #2d3748;
+}
+
+.infoCard p {
+  color: #718096;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .emergencyBanner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .emergencyNumbers {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .emergencyLink {
+    width: 100%;
+  }
+
+  .resourcesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .categories {
+    flex-direction: column;
+  }
+
+  .categoryBtn {
+    justify-content: center;
+  }
+
+  .infoSection {
+    padding: 2rem 1.5rem;
+  }
+}
