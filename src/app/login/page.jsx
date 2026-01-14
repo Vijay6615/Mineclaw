@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import styles from '@/styles/auth.module.css';
 
@@ -14,6 +14,15 @@ export default function AuthPage() {
   });
   const [errors, setErrors] = useState({});
   const [message, setMessage] = useState('');
+
+  useEffect(() => {
+    // Check if user is already logged in
+    const user = localStorage.getItem('mineclaw_current_user');
+    if (user) {
+      // Redirect to home if already authenticated
+      router.push('/');
+    }
+  }, [router]);
 
   const handleChange = (e) => {
     setFormData({

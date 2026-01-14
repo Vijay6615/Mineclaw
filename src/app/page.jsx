@@ -1,15 +1,31 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 import Hero from '@/components/Hero';
 import Features from '@/components/Features';
 import Articles from '@/components/Articles';
-import AuthModal from "@/components/AuthModel";
+import AuthModal from '@/components/AuthModel';
 import ProtectedLink from '@/components/ProtectedLink';
-import styles from "@/styles/page.module.css";
+import styles from '../styles/page.module.css';
 
 export default function Home() {
+  const router = useRouter();
   const [showAuthModal, setShowAuthModal] = useState(false);
   const [redirectPath, setRedirectPath] = useState('/');
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Check if user is logged in
+    const user = localStorage.getItem('mineclaw_current_user');
+    if (!user) {
+      // Redirect to login page if not authenticated
+      router.push('/login');
+    } else {
+      setIsAuthenticated(true);
+    }
+    setIsLoading(false);
+  }, [router]);
 
   const handleAuthRequired = (path) => {
     setRedirectPath(path);
@@ -19,6 +35,11 @@ export default function Home() {
   const closeAuthModal = () => {
     setShowAuthModal(false);
   };
+
+  // Show loading or nothing while checking authentication
+  if (isLoading || !isAuthenticated) {
+    return null;
+  }
 
   return (
     <main className={styles.main}>
