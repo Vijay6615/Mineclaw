@@ -83,7 +83,7 @@ export default function Navbar() {
             className={styles.navLink}
             onAuthRequired={handleAuthRequired}
           >
-            Contact
+            Dashboard
           </ProtectedLink>
           <a href="tel:1-800-662-4357" className={styles.emergencyBtn}>
             🆘 Get Help
@@ -166,7 +166,7 @@ export default function Navbar() {
             onClick={toggleMenu}
             onAuthRequired={handleAuthRequired}
           >
-            Contact
+            Dashboard
           </ProtectedLink>
           <a href="tel:1-800-662-4357" className={styles.mobileEmergency}>
             🆘 Get Help Now

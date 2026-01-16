@@ -26,10 +26,10 @@ export default function Footer() {
           <div className={styles.section}>
             <h4 className={styles.heading}>Quick Links</h4>
             <ul className={styles.links}>
-              <li><Link href="/about">About Us</Link></li>
-              <li><Link href="/articles">Articles</Link></li>
-              <li><Link href="/resources">Resources</Link></li>
-              <li><Link href="/contact">Contact</Link></li>
+              <li><Link href="/about=mc">About Us</Link></li>
+              <li><Link href="/articles=mc">Articles</Link></li>
+              <li><Link href="/resources=mc">Resources</Link></li>
+              <li><Link href="/contact=mc">Dashboard</Link></li>
             </ul>
           </div>
 
@@ -38,9 +38,9 @@ export default function Footer() {
             <h4 className={styles.heading}>Get Help</h4>
             <ul className={styles.links}>
               <li><a href="tel:1-800-662-4357">Crisis Hotline</a></li>
-              <li><Link href="/resources">Find Treatment</Link></li>
-              <li><Link href="/resources">Support Groups</Link></li>
-              <li><Link href="/resources">Community Resources</Link></li>
+              <li><Link href="/resources=mc">Find Treatment</Link></li>
+              <li><Link href="/resources=mc">Support Groups</Link></li>
+              <li><Link href="/resources=mc">Community Resources</Link></li>
             </ul>
           </div>
 
