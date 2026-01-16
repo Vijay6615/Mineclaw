@@ -6,7 +6,7 @@ import Features from '@/components/Features';
 import Articles from '@/components/Articles';
 import AuthModal from '@/components/AuthModel';
 import ProtectedLink from '@/components/ProtectedLink';
-import styles from '../styles/page.module.css';
+import styles from '@/styles/page.module.css';
 
 export default function Home() {
   const router = useRouter();
